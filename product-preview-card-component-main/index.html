@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=1"
+    />
     <link
       rel="icon"
       type="image/png"
@@ -22,22 +25,23 @@
     <title>Frontend Mentor | Product preview card component</title>
   </head>
   <body>
-    <div class="container">
+    <main class="container">
       <div class="row">
         <div class="col">
-          <img
-            src="./images/image-product-desktop.jpg"
-            alt="parfum"
-            class="perfume-img desktop-img"
-          />
-          <img
-            src="./images/image-product-mobile.jpg"
-            alt="parfum"
-            class="perfume-img mobile-img"
-          />
+          <picture>
+            <source
+              media="(max-width: 767.98px)"
+              srcset="./images/image-product-mobile.jpg"
+            />
+            <img
+              class="perfume-img"
+              src="./images/image-product-desktop.jpg"
+              alt="chanel parfum"
+            />
+          </picture>
         </div>
         <div class="col content">
-          <h5 class="sub-title">perfume</h5>
+          <p class="sub-title">perfume</p>
           <h1 class="title">Gabrielle Essence Eau De Parfum</h1>
           <p class="desc">
             A floral, solar and voluptuous interpretation composed by Olivier
@@ -45,9 +49,9 @@
           </p>
           <div class="flex">
             <span class="new-price">$149.99</span>
-            <span class="old-price">$169.99</span>
+            <del><span class="sr-only">Previous Price</span>$169.99</del>
           </div>
-          <div class="button">
+          <div class="button" role="button">
             <span class="icon"
               ><img src="./images/icon-cart.svg" alt="cart"
             /></span>
@@ -55,12 +59,12 @@
           </div>
         </div>
       </div>
-      <div class="attribution">
+      <footer class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
         >. Coded by <a href="#">Ayah Ezzeddine</a>.
-      </div>
-    </div>
+      </footer>
+    </main>
   </body>
 </html>

@@ -13,10 +13,8 @@
 body {
   background-color: var(--cream);
   color: var(--dark-grayish-blue);
-
-  /* font-family: "Fraunces", serif; */
-
   font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
 }
 
 .container {
@@ -33,7 +31,6 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
   margin: auto;
   border-radius: 10px;
   overflow: hidden;
@@ -52,7 +49,6 @@ body {
 .content {
   background-color: var(--white);
   padding: 24px;
-
   max-height: 360px;
 }
 .sub-title {
@@ -66,14 +62,12 @@ body {
   line-height: 1;
   font-family: "Fraunces", serif;
   font-weight: 700;
-
-  font-size: 30px;
+  font-size: 1.875rem;
   color: var(--very-dark-blue);
 }
 
 .desc {
   margin-bottom: 20px;
-  font-size: 12px;
   line-height: 1.6;
 }
 .flex {
@@ -86,12 +80,17 @@ body {
   color: var(--dark-cyan);
   font-weight: 700;
   font-family: "Fraunces", serif;
-  font-size: 24px;
+  font-size: 1.5rem;
   margin-right: 15px;
 }
-.old-price {
-  font-size: 12px;
-  text-decoration: line-through;
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 .button {
@@ -111,7 +110,6 @@ body {
   background-color: hsl(157, 35%, 16%);
 }
 .button-text {
-  font-size: 12px;
   font-weight: 500;
   text-transform: capitalize;
   margin-left: 10px;
@@ -121,24 +119,15 @@ body {
 }
 .attribution {
   color: var(--dark-grayish-blue);
-  font-size: 12px;
   text-align: center;
   margin-bottom: 10px;
 }
 @media (max-width: 767.98px) {
-  .desktop-img {
-    display: none;
-  }
   .row {
     flex-direction: column;
     margin: 20px 15px;
   }
   .attribution {
-    display: none;
-  }
-}
-@media (min-width: 768px) {
-  .mobile-img {
     display: none;
   }
 }
